@@ -1,3 +1,5 @@
+// -*- compile-command: "rustc main.rs; ./main" -*-
+
 fn main() {
-    println!("ok");
+    println!("こんにちは");
 }
