@@ -1,3 +1,4 @@
 # learning-rust
-# learning-rust
-# learning-rust
+
+    rustc main.rs
+    ./main
