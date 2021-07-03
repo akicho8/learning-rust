@@ -9,3 +9,14 @@ authors = ["Akira Ikeda <pinpon.ikeda@gmail.com>"]
 [dependencies]
 rand = "0.3.14"
 regex = "1.5.4"
+# sdl2 = "0.31.0"
+# sdl2 = "0.34"
+
+# [dependencies.sdl2]
+# git = "https://github.com/rust-sdl2/rust-sdl2"
+
+[dependencies.sdl2]
+version = "0.31.0"
+default-features = false
+features = ["image"]
+
