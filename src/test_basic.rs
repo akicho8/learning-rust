@@ -1,8 +1,10 @@
 // -*- compile-command: "cargo test -- --nocapture" -*-
+// use std::cmp::PartialEq;
 
 #[cfg(test)]
 mod tests {
     // use super::*;
+
     #[test]
     fn test_tuple() {
         let foo = ("a", 123, "c");
@@ -64,5 +66,33 @@ mod tests {
         for e in ["a", "b"].iter() {
             println!("--> {}", e);
         }
+    }
+    #[test]
+    fn test_enum() {
+        enum FOO1  { A, B } // 従来の単なる enum
+        let v1: FOO1 = FOO1::A;
+        let _v2: FOO1 = FOO1::B;
+        // assert_eq!(FOO1::A, _v1); ← うごかない
+
+        // enum のそれぞれが異なる構造体みたいになれる
+        enum FOO2 {
+            A(String),
+            B(u32, u32),
+        }
+        FOO2::A(String::from("a"));
+        FOO2::B(1, 2);
+
+        // enum も struct と同じように impl でメソッドを追加できる
+        impl FOO1 {
+            fn func1(&self) -> u32 {
+                123
+            }
+        }
+        assert_eq!(123, v1.func1());
+    }
+    #[test]
+    fn test_option() {
+        let _ = Some(1);           // Some だと型がわかるのでそのまま指定できる
+        let _: Option<i32> = None; // None の場合は型がわからないので自分で指定しないといけない 
     }
 }

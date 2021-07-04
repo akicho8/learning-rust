@@ -15,8 +15,7 @@ regex = "1.5.4"
 # [dependencies.sdl2]
 # git = "https://github.com/rust-sdl2/rust-sdl2"
 
-[dependencies.sdl2]
-version = "0.31.0"
-default-features = false
-features = ["image"]
-
+# [dependencies.sdl2]
+# version = "0.31.0"
+# default-features = false
+# features = ["image"]
