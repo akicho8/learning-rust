@@ -5,6 +5,7 @@
 mod test_basic;
 mod test_string;
 mod test_struct;
+mod test_match;
 
 fn main() {
     const FOO: u32 = 100;
