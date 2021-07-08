@@ -6,6 +6,15 @@ mod test_basic;
 mod test_string;
 mod test_struct;
 mod test_match;
+mod test_module;
+mod test_vec;
+mod test_hash_map;
+
+mod mod1 {
+    pub fn func1() -> u32 {
+        1
+    }
+}
 
 fn main() {
     const FOO: u32 = 100;
@@ -15,6 +24,10 @@ fn main() {
     x = 2;
     println!("{}", x);
     println!("{}", FOO);
+
+    // モジュールの呼び出し方法
+    println!("crate::mod1::func1() -> {}", crate::mod1::func1());
+    println!("mod1::func1() -> {}", mod1::func1());
 
     // println!("foobar::my_func1 -> {}", foobar::my_func1(1, 2));
 
