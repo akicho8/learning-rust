@@ -1,6 +1,7 @@
 // -*- compile-command: "cargo test -- --nocapture" -*-
 
 mod mod1 {
+    #[allow(dead_code)]
     pub fn func1() -> u32 {
         1
     }

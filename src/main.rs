@@ -9,8 +9,10 @@ mod test_match;
 mod test_module;
 mod test_vec;
 mod test_hash_map;
+mod test_test;
 
 mod mod1 {
+    // #[allow(dead_code)]
     pub fn func1() -> u32 {
         1
     }
@@ -25,6 +27,8 @@ fn main() {
     println!("{}", x);
     println!("{}", FOO);
 
+    crate::mod1::func1();
+    
     // モジュールの呼び出し方法
     println!("crate::mod1::func1() -> {}", crate::mod1::func1());
     println!("mod1::func1() -> {}", mod1::func1());
